@@ -1,8 +1,6 @@
 <script lang="ts">
     export let src;
     export let date;
-    export let title;
-    export let description;
 </script>
 
 <div class="slide-card glass">
@@ -18,8 +16,6 @@
     </div>
     <div class="content">
         <div class="date">{date}</div>
-        <h3>{title}</h3>
-        <p>{description}</p>
         <a href="/meetings/{src}.pdf" target="_blank" class="view-button">View Full Screen</a>
     </div>
 </div>
@@ -34,9 +30,7 @@
         background: rgba(18, 18, 18, 0.7);
     }
 
-    .slide-card:hover {
-        transform: translateY(-4px);
-    }
+    
 
     .slides-container {
         width: 100%;

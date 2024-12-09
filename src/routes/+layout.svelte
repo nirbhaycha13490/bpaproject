@@ -22,7 +22,7 @@
         <nav class="container">
             <a href="/" class="logo">
                 <div class="logo-container">
-                    <span class="text-gradient">RHS <span>ENGINEERING</span> <span>CLUB</span></span>
+                    <span class="text-gradient" style="font-size: 24px;">Reedy Engineering Club</span>
 
                 </div>
             </a>
@@ -61,31 +61,28 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>
-                        <span class="text-gradient">RHS</span>
-                        <span>Engineering</span>
+                        <span class="text-gradient" style="font-size: var(--text-2xl)">Reedy Engineering Club</span>
                     </h3>
-                    <p>Building tomorrow's innovators today</p>
+                    <p>Engineering for the Community</p>
                     <div class="social-links">
-                        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram" class="glass-hover">
+                        <a href="https://www.instagram.com/reedyengineering/" target="_blank" rel="noopener" aria-label="Instagram" class="glass-hover">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
                                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
                                 <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
                             </svg>
                         </a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="Discord" class="glass-hover">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M8.5 12.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Z"/>
-                                <path d="M15.5 12.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Z"/>
-                                <path d="M15.5 17.5v-3a3.5 3.5 0 0 0-7 0v3"/>
-                                <path d="M19 22H5c-1.09 0-2-.91-2-2V4c0-1.09.91-2 2-2h14c1.09 0 2 .91 2 2v16c0 1.09-.91 2-2 2Z"/>
-                            </svg>
+                        <a href="https://www.remind.com/classes/reedytame" target="_blank" rel="noopener" aria-label="Discord" class="glass-hover">
+                            <img src="socials/remind.svg" width="24" height="24" style="color: var(--text-secondary)" />
                         </a>
-                        <a href="mailto:placeholder@gmail.com" aria-label="Email" class="glass-hover">
+                        <a href="mailto:reedyengineeringclub@gmail.com" aria-label="Email" class="glass-hover">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <rect width="20" height="16" x="2" y="4" rx="2"/>
                                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
                             </svg>
+                        </a>
+						<a href="https://www.tame.org/" target="_blank" rel="noopener" aria-label="Discord" class="glass-hover">
+                            <img src="socials/tame.png" height="24" style="color: var(--text-secondary)" />
                         </a>
                     </div>
                 </div>
@@ -125,10 +122,7 @@
         height: var(--nav-height);
         z-index: 100;
         padding: var(--space-4) 0;
-    }
-
-    header.scrolled {
-        background: var(--surface-0);
+		backdrop-filter: blur(12px);
     }
 
     nav {
@@ -145,8 +139,7 @@
 
     .logo-container {
         display: flex;
-        flex-direction: column;
-        gap: 0;
+        align-items: center;
     }
 
     .text-gradient {
@@ -233,7 +226,7 @@
         display: grid;
         grid-template-columns: 2fr 1fr 1fr;
         gap: var(--space-12);
-        padding: var(--space-12) 0;
+        padding: var(--space-12) 0 var(--space-6) 0;
     }
 
     .footer-section {
@@ -257,6 +250,7 @@
 
     .footer-section p {
         color: var(--text-secondary);
+		margin: 0;
     }
 
     .social-links {
@@ -269,7 +263,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 40px;
+        min-width: 40px;
         height: 40px;
         color: var(--text-primary);
         border-radius: var(--border-radius-lg);
@@ -283,7 +277,7 @@
     }
 
     .footer-bottom {
-        padding: var(--space-6) 0;
+        padding: 0 0 var(--space-6) 0;
         border-top: 1px solid var(--glass-border);
         text-align: center;
         color: var(--text-tertiary);

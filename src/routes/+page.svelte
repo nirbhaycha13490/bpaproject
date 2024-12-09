@@ -55,7 +55,7 @@
             {/each}
         </div>
     </section>
-
+	<!--
     <section class="projects">
         <h2>Latest Projects</h2>
         <div class="projects-grid">
@@ -82,10 +82,7 @@
             </div>
         </div>
     </section>
-
-    <div class="test-image">
-        <img src="/images/hero-bg.jpg" alt="test" />
-    </div>
+	-->
 
     <section class="join">
         <div class="join-content glass" in:fly={{ y: 20, duration: 600 }}>

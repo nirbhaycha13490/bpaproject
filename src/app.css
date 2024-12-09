@@ -3,7 +3,8 @@
 
 :root {
     /* Core Colors */
-    --primary: #00D1FF;
+    /*--primary: #00D1FF;*/
+	--primary: #21ff7d;
     --secondary: #FF3DFF;
     --accent: #FFE600;
     

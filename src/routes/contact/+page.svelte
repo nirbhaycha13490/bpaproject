@@ -17,8 +17,8 @@
                         <Mail size={32} />
                     </div>
                     <h3>Email</h3>
-                    <p>placeholder@gmail.com</p>
-                    <a href="mailto:null" class="contact-button">
+                    <p>reedyengineeringclub<br/>@gmail.com</p>
+                    <a href="mailto:reedyengineeringclub@gmail.com" class="contact-button">
                         Send Email
                     </a>
                 </div>
@@ -31,7 +31,7 @@
                     </div>
                     <h3>Location</h3>
                     <p>Room B213<br>Reedy High School</p>
-                    <a href="https://maps.google.com" target="_blank" class="contact-button">
+                    <a href="https://maps.app.goo.gl/jDCK49aXdaBVeiXr8" target="_blank" class="contact-button">
                         View Map
                     </a>
                 </div>
@@ -58,8 +58,8 @@
                     <h3>Social</h3>
                     <p>Follow us on social media<br>for updates</p>
                     <div class="social-links">
-                        <a href="#" class="contact-button">Instagram</a>
-                        <a href="#" class="contact-button">LinkedIn</a>
+                        <a href="https://www.instagram.com/reedyengineering/" class="contact-button">Instagram</a>
+                        <a href="https://www.remind.com/classes/reedytame" class="contact-button">Remind</a>
                     </div>
                 </div>
             </div>
@@ -96,10 +96,6 @@
         transition: transform var(--transition);
     }
 
-    .contact-card:hover {
-        transform: translateY(-4px);
-    }
-
     .card-content {
         padding: var(--space-8);
         display: flex;
@@ -115,7 +111,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: var(--border-radius-full);
+        border-radius: 50%;
         background: var(--surface-200);
         margin-bottom: var(--space-2);
         color: var(--primary);

@@ -130,10 +130,6 @@
         transition: transform var(--transition);
     }
 
-    .product-card:hover {
-        transform: translateY(-4px);
-    }
-
     .product-image {
         position: relative;
         width: 100%;

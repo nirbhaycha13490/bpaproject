@@ -313,11 +313,6 @@
             padding: var(--space-8) 0;
         }
 
-        .cta-buttons {
-            flex-direction: column;
-            gap: var(--space-4);
-        }
-
         .features, .projects, .join {
             padding: var(--space-8) 0;
         }

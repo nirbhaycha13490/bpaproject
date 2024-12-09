@@ -11,7 +11,7 @@
 
     <section class="contacts">
         <div class="contacts-grid">
-            <div class="contact-card" in:fly={{ y: 20, duration: 600, delay: 100 }}>
+            <div class="contact-card glass" in:fly={{ y: 20, duration: 600, delay: 100 }}>
                 <div class="card-content">
                     <div class="icon-wrapper">
                         <Mail size={32} />
@@ -24,7 +24,7 @@
                 </div>
             </div>
 
-            <div class="contact-card" in:fly={{ y: 20, duration: 600, delay: 200 }}>
+            <div class="contact-card glass" in:fly={{ y: 20, duration: 600, delay: 200 }}>
                 <div class="card-content">
                     <div class="icon-wrapper">
                         <MapPin size={32} />
@@ -37,7 +37,7 @@
                 </div>
             </div>
 
-            <div class="contact-card" in:fly={{ y: 20, duration: 600, delay: 300 }}>
+            <div class="contact-card glass" in:fly={{ y: 20, duration: 600, delay: 300 }}>
                 <div class="card-content">
                     <div class="icon-wrapper">
                         <Clock size={32} />
@@ -50,7 +50,7 @@
                 </div>
             </div>
 
-            <div class="contact-card" in:fly={{ y: 20, duration: 600, delay: 400 }}>
+            <div class="contact-card glass" in:fly={{ y: 20, duration: 600, delay: 400 }}>
                 <div class="card-content">
                     <div class="icon-wrapper">
                         <Users size={32} />
@@ -90,9 +90,7 @@
     }
 
     .contact-card {
-        background: var(--surface-100);
         border-radius: var(--border-radius-2xl);
-        overflow: hidden;
         transition: transform var(--transition);
     }
 
@@ -141,6 +139,8 @@
     .contact-button:hover {
         background: var(--primary);
         color: var(--surface-0);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px var(--primary-hover);
     }
 
     .social-links {

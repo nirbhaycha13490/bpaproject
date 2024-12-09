@@ -1,27 +1,22 @@
 <script>
     import { fly } from 'svelte/transition';
-    import { Cpu, Rocket, Code, Users } from 'lucide-svelte';
+    import { Cpu, Rocket, GraduationCap, Users, Swords } from 'lucide-svelte';
 
     const features = [
         {
-            icon: Cpu,
-            title: 'temp',
-            description: 'temp'
+            icon: GraduationCap,
+            title: 'Lectures',
+            description: 'We teach to our members engineering concepts and disciplines from numerous fields.'
         },
         {
-            icon: Code,
-            title: 'temp',
-            description: 'temp'
-        },
-        {
-            icon: Users,
-            title: 'temp',
-            description: 'temp'
+            icon: Swords,
+            title: 'Competitions',
+            description: 'We host engineering competitions that can earn our members scholarships and medals.'
         },
         {
             icon: Rocket,
-            title: 'temp',
-            description: 'temp'
+            title: 'Projects',
+            description: 'We host interactive projects to expose members to real-world engineering scenarios.'
         }
     ];
 </script>
@@ -155,7 +150,7 @@
 
     .button.primary:hover {
         transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(0, 209, 255, 0.3);
+        box-shadow: 0 4px 12px var(--primary-hover);
     }
 
     .button.secondary {
@@ -202,7 +197,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: var(--border-radius-full);
+        border-radius: 50%;
         background: var(--surface-100);
         color: var(--primary);
     }

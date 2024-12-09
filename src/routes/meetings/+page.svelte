@@ -6,7 +6,7 @@
     <section class="hero">
         <h1>Next Meeting</h1>
         <div class="meeting-info">
-            <h2>January 1, 2025</h2>
+            <h2 style="color: var(--primary);">January 1, 2025</h2>
             <h2>Mr. Patton's room</h2>
             <h2>(B213) @ Adv'</h2>
         </div>

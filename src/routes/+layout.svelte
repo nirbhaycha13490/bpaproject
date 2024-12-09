@@ -29,6 +29,7 @@
 
             <div class="nav-links" class:open={isMenuOpen}>
                 <a href="/" class="nav-link">Home</a>
+                <a href="/about" class="nav-link">About</a>
                 <a href="/meetings" class="nav-link">Meetings</a>
                 <a href="/shop" class="nav-link">Shop</a>
                 <a href="/contact" class="nav-link">Contact</a>

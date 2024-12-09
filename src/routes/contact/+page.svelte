@@ -17,7 +17,7 @@
                         <Mail size={32} />
                     </div>
                     <h3>Email</h3>
-                    <p>reedyengineeringclub<br/>@gmail.com</p>
+                    <p style="line-height: 3.2;">reedyengineeringclub@gmail.com</p>
                     <a href="mailto:reedyengineeringclub@gmail.com" class="contact-button">
                         Send Email
                     </a>

@@ -4,7 +4,7 @@
 </script>
 
 <div class="container">
-    <section class="hero">
+    <section class="hero" in:fly={{ y: 20, duration: 600 }}>
         <h1 class="text-gradient">Contact Us</h1>
         <p class="subtitle">Get in touch with our team</p>
     </section>
@@ -87,7 +87,6 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: var(--space-6);
-        place-content: center;
     }
 
     .contact-card {

@@ -19,6 +19,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"lucide-svelte": "^0.462.0"
+		"lucide-svelte": "^0.462.0",
+		"pdfjs-dist": "^4.9.155"
 	}
 }

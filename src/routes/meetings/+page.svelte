@@ -1,27 +1,30 @@
 <script lang="ts">
 	import Slide from "$lib/components/Slide.svelte";
+    import { fly } from "svelte/transition";
 </script>
 
 <div class="container">
-    <section class="hero">
-        <h1>Next Meeting</h1>
+    <section class="hero" in:fly={{ y: 20, duration: 600 }}>
+        <h2>Next Meeting</h2>
         <div class="meeting-info">
-            <h2 style="color: var(--primary);">January 1, 2025</h2>
-            <h2>Mr. Patton's room</h2>
-            <h2>(B213) @ Adv'</h2>
+            <h1 style="color: var(--primary);">January 1, 2025</h1>
+            <h3>Mr. Patton's room</h3>
+            <h3>B213 @ Advisory</h3>
         </div>
     </section>
 
     <section class="slides">
-        <h2>Past Meeting Slides</h2>
+        <h2 in:fly={{ y: 20, duration: 600, delay: 100 }}>Past Meeting Slides</h2>
         <div class="slides-grid grid">
-            <Slide 
+            <Slide
                 src="10-10-2024" 
-                date="October 10, 2024" 
+                date="October 10, 2024"
+                delay={200}
             />
             <Slide 
-                src="10-10-2024" 
-                date="October 10, 2024" 
+                src="11-14-2024" 
+                date="November 14, 2024"
+                delay={300}
             />
         </div>
     </section>
@@ -30,11 +33,10 @@
 <style>
     .hero {
         text-align: center;
-        padding: var(--space-16) 0;
+        padding: var(--space-16) 0 0 0;
     }
 
     .hero h1 {
-        font-size: var(--text-4xl);
         margin-bottom: var(--space-4);
     }
 
@@ -100,7 +102,7 @@
 
     .grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         gap: var(--space-6);
         margin-bottom: var(--space-8);
     }

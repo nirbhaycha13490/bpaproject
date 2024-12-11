@@ -1,22 +1,25 @@
 <script>
     import { fly } from 'svelte/transition';
-    import { Cpu, Rocket, GraduationCap, Users, Swords } from 'lucide-svelte';
+    import { Rocket, GraduationCap, Swords } from 'lucide-svelte';
 
     const features = [
         {
             icon: GraduationCap,
             title: 'Lectures',
-            description: 'We teach to our members engineering concepts and disciplines from numerous fields.'
+            description: 'We teach to our members engineering concepts and disciplines from numerous fields.',
+            delay: 100
         },
         {
             icon: Swords,
             title: 'Competitions',
-            description: 'We host engineering competitions that can earn our members scholarships and medals.'
+            description: 'We host engineering competitions that can earn our members scholarships and medals.',
+            delay: 1000
         },
         {
             icon: Rocket,
             title: 'Projects',
-            description: 'We host interactive projects to expose members to real-world engineering scenarios.'
+            description: 'We host interactive projects to expose members to real-world engineering scenarios.',
+            delay: 300
         }
     ];
 </script>
@@ -31,16 +34,16 @@
             <p class="hero-text">Join us on our mission to shape the future of engineering and innovation.</p>
             <div class="cta-buttons">
                 <a href="/meetings" class="button primary">Join Us</a>
-                <a href="/contact" class="button secondary">Learn More</a>
+                <a href="/about" class="button secondary">Learn More</a>
             </div>
         </div>
     </section>
 
     <section class="features">
-        <h2>What We Do</h2>
-        <div class="features-grid">
+        <h2 in:fly={{ y: 20, duration: 600 }}>What We Do</h2>
+        <div class="features-grid" in:fly={{ y: 20, duration: 600, delay: 100 }}>
             {#each features as feature}
-                <div class="feature-card glass" in:fly={{ y: 20, duration: 600 }}>
+                <div class="feature-card glass">
                     <div class="feature-icon">
                         <svelte:component this={feature.icon} size={32} />
                     </div>

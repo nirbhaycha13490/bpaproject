@@ -18,7 +18,7 @@
 </script>
 
 <div class="layout">
-    <header class:scrolled={isScrolled}>
+    <header class:scrolled={isScrolled} class="glass">
         <nav class="container">
             <a href="/" class="logo">
                 <div class="logo-container">
@@ -123,7 +123,9 @@
         height: var(--nav-height);
         z-index: 100;
         padding: var(--space-4) 0;
-		backdrop-filter: blur(12px);
+		/*backdrop-filter: blur(12px);*/
+        border: 1px solid var(--glass-border);
+        box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.1);
     }
 
     nav {
@@ -220,7 +222,7 @@
 
     footer {
         margin-top: var(--space-16);
-        border-top: 1px solid var(--glass-border);
+        border: 1px solid var(--glass-border);
     }
 
     .footer-content {

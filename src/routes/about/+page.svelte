@@ -4,37 +4,42 @@
     const officers = [
         {
             title: 'Saksham Shukla',
-            description: 'CEO of this club'
+            description: 'CEO of this club',
+            delay: 100
         },
         {
             title: "Aman Rai",
-            description: "The Rai of Aman"
+            description: "The Rai of Aman",
+            delay: 200
         },
         {
-            title: "Brandon Thames",
-            description: "Website Developer"
+            title: "Nirbhay",
+            description: "Just Nirbhay",
+            delay: 200
         },
-        {
-            title: "Yuvraj Bathula",
-            description: "Website Developer"
-        }
     ];
 </script>
 
 <div class="container">
     <section class="hero">
-        <h1 class="text-gradient">About Us</h1>
-        <p>The Reedy TAME Engineering Club inspires students to explore STEM through hands-on projects, innovative problem-solving, and collaboration. We foster a supportive environment where members can develop critical skills, build connections, and prepare for future careers in engineering and beyond.</p>
-        <br/><h2>About TAME</h2>
-        <p>TAME programs depend on the support of over 800 volunteers from local STEM industries, schools, libraries, and communities. The TAME State Office is staffed by dedicated professionals who coordinate TAME's day-to-day work, support Club Leaders and Region activities, and plan for the organization’s long-term growth.</p>
-        <br/><h2>TAME's Misson</h2>
-        <p>TAME creates equitable experiences for students from underrepresented groups to explore futures in engineering by fostering their sense of belonging and equipping them with knowledge, skills, and intergenerational support through statewide programming at no cost to students.</p>
+        <div in:fly={{ y: 20, duration: 600 }}>
+            <h1 class="text-gradient">About Us</h1>
+            <p>The Reedy TAME Engineering Club inspires students to explore STEM through hands-on projects, innovative problem-solving, and collaboration. We foster a supportive environment where members can develop critical skills, build connections, and prepare for future careers in engineering and beyond.</p>
+        </div>
+        <div in:fly={{ y: 20, duration: 600, delay: 100 }}>
+            <h2>About TAME</h2>
+            <p>TAME programs depend on the support of over 800 volunteers from local STEM industries, schools, libraries, and communities. The TAME State Office is staffed by dedicated professionals who coordinate TAME's day-to-day work, support Club Leaders and Region activities, and plan for the organization’s long-term growth.</p>    
+        </div>
+        <div in:fly={{ y: 20, duration: 600, delay: 200 }}>
+            <h2>TAME's Misson</h2>
+            <p>TAME creates equitable experiences for students from underrepresented groups to explore futures in engineering by fostering their sense of belonging and equipping them with knowledge, skills, and intergenerational support through statewide programming at no cost to students.</p>
+        </div>
     </section>
     <section class="team">
-        <h2>Our Team</h2>
+        <h2 in:fly={{ y: 20, duration: 600 }}>Our Team</h2>
         <div class="team-grid">
             {#each officers as officer}
-                <div class="officer-card glass" in:fly={{ y: 20, duration: 600 }}>
+                <div class="officer-card glass" in:fly={{ y: 20, duration: 600, delay: officer.delay }}>
                     <h3>{officer.title}</h3>
                     <img src="images/hero-bg.jpg"/>
                     <p style="line-height: 0;">{officer.description}</p>
@@ -46,8 +51,12 @@
 
 <style>
     .hero {
-        padding: var(--space-16) 0;
+        padding: var(--space-16) 0 0 0;
         text-align: center;
+    }
+
+    .hero > div {
+        margin-bottom: var(--space-12);
     }
 
     .team-grid {

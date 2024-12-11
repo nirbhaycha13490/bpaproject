@@ -2,6 +2,7 @@
     import { fly } from 'svelte/transition';
     import { Rocket, GraduationCap, Swords } from 'lucide-svelte';
 
+
     const features = [
         {
             icon: GraduationCap,
@@ -23,6 +24,8 @@
         }
     ];
 </script>
+<script src="https://cdn.sellix.io/static/js/embed.js"></script>
+
 
 <div class="container">
     <section class="hero">

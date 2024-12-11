@@ -4,34 +4,63 @@
 
     const products = [
         {
-            name: 'product 1',
-            price: 20,
-            description: 'placeholder',
-            image: '/projects/placeholder.jpg',
-            sizes: ['S', 'M', 'L', 'XL']
+            name: 'Shirt',
+            price: 8.99,
+            description: 'Blue cotton shirt',
+            image: 'https://imagedelivery.net/95QNzrEeP7RU5l5WdbyrKw/58e2c9d2-0e5e-4586-56c1-36044d83bd00/shopitem',
+            sizes: ['S', 'M', 'L', 'XL'],
+            id: '675a08763ac33'
         },
         {
-            name: 'product 2',
-            price: 35,
-            description: 'placeholder',
-            image: '/projects/placeholder.jpg',
-            type: 'Kit'
+            name: 'Shorts',
+            price: 4.99,
+            description: 'Blue cotton shorts',
+            image: 'https://imagedelivery.net/95QNzrEeP7RU5l5WdbyrKw/c6098836-c4a1-4291-5670-291a41656800/shopitem',
+            sizes: ['S', 'M', 'L', 'XL'],
+            id: '675a0887a0102'
         },
         {
-            name: 'product 3',
-            price: 5,
-            description: 'placeholder',
-            image: '/projects/placeholder.jpg',
-            type: 'Accessories'
+            name: 'Sweater',
+            price: 11.99,
+            description: 'Blue cotton shirt',
+            image: 'https://imagedelivery.net/95QNzrEeP7RU5l5WdbyrKw/c839affa-195b-47fc-a9d1-33e335e5fc00/shopitem',
+            sizes: ['S', 'M', 'L', 'XL'],
+            id: '675a088b74d4e'
         },
         {
-            name: 'product 4',
-            price: 25,
-            description: 'placeholder',
-            image: '/projects/placeholder.jpg',
-            type: 'Materials'
-        }
+            name: 'Pants',
+            price: 8.00,    
+            description: 'Blue cotton shirt',
+            image: 'https://imagedelivery.net/95QNzrEeP7RU5l5WdbyrKw/d80f4097-16d0-4eee-2a6f-476588354f00/shopitem',
+            sizes: ['S', 'M', 'L', 'XL'],
+            id: '675a0ae01ac60'
+        },
+        {
+            name: 'Hoodie',
+            price: 8.00,    
+            description: 'Blue cotton shirt',
+            image: 'https://imagedelivery.net/95QNzrEeP7RU5l5WdbyrKw/fbdad5c6-9a88-4c99-f73c-0e8bab4b7700/shopitem',
+            sizes: ['S', 'M', 'L', 'XL'],
+            id: '675a0bd184ef7'
+        },
+        
+        
+
+        
     ];
+
+    // Load Sellix Embed Scripts Dynamically
+    if (typeof window !== 'undefined') {
+        const sellixScript = document.createElement('script');
+        sellixScript.src = "https://cdn.sellix.io/static/js/embed.js";
+        sellixScript.async = true;
+        document.head.appendChild(sellixScript);
+
+        const sellixStyle = document.createElement('link');
+        sellixStyle.rel = "stylesheet";
+        sellixStyle.href = "https://cdn.sellix.io/static/css/embed.css";
+        document.head.appendChild(sellixStyle);
+    }
 </script>
 
 <div class="container">
@@ -61,15 +90,12 @@
                                 {/each}
                             </div>
                         {/if}
-                        {#if product.type}
-                            <div class="type-tag">
-                                <Box size={16} />
-                                <span>{product.type}</span>
-                            </div>
-                        {/if}
-                        <button class="buy-button">
-                            <ShoppingCart size={16} />
-                            Add to Cart
+
+                        <button class="buy-button"
+                            data-sellix-product="{product.id}"
+                            type="submit"
+                            alt="Buy Now with sellix.io">
+                            Purchase
                         </button>
                     </div>
                 </div>
@@ -191,17 +217,6 @@
     .size-button:hover {
         background: var(--primary);
         color: var(--surface-0);
-    }
-
-    .type-tag {
-        display: inline-flex;
-        align-items: center;
-        gap: var(--space-2);
-        background: var(--surface-200);
-        color: var(--text-primary);
-        padding: var(--space-2) var(--space-3);
-        border-radius: var(--border-radius-lg);
-        margin-bottom: var(--space-4);
     }
 
     .buy-button {

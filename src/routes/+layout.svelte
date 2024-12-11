@@ -2,6 +2,7 @@
     import "../app.css";
     import { onMount } from 'svelte';
     import { fade, fly } from 'svelte/transition';
+    import { page } from '$app/stores';
 
     let isMenuOpen = false;
     let isScrolled = false;
@@ -15,6 +16,15 @@
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     });
+
+    let previousRoute = "/";
+
+    $: {
+        if (previousRoute !== $page.url.pathname) {
+            previousRoute = $page.url.pathname;
+            isMenuOpen = false;
+        }
+    }
 </script>
 
 <div class="layout">

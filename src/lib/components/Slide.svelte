@@ -125,8 +125,8 @@
     .slide-buttons > button:not(:disabled):hover {
         background: var(--primary);
         color: var(--surface-0);
-        transform: translateY(-2px);
         box-shadow: 0 4px 12px var(--primary-hover);
+		cursor: pointer;
     }
 
     .slide-buttons > button:disabled {

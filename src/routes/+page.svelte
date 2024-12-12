@@ -14,7 +14,7 @@
             icon: Swords,
             title: 'Competitions',
             description: 'We host engineering competitions that can earn our members scholarships and medals.',
-            delay: 1000
+            delay: 200
         },
         {
             icon: Rocket,
@@ -44,9 +44,9 @@
 
     <section class="features">
         <h2 in:fly={{ y: 20, duration: 600 }}>What We Do</h2>
-        <div class="features-grid" in:fly={{ y: 20, duration: 600, delay: 100 }}>
+        <div class="features-grid">
             {#each features as feature}
-                <div class="feature-card glass">
+                <div class="feature-card glass" in:fly|global={{ y: 20, duration: 600, delay: feature.delay }}>
                     <div class="feature-icon">
                         <svelte:component this={feature.icon} size={32} />
                     </div>

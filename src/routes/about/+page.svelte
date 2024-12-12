@@ -4,18 +4,21 @@
     const officers = [
         {
             title: 'Saksham Shukla',
-            description: 'CEO of this club',
+            description: 'President & Founder',
+			img: "team/saksham_shukla.png",
             delay: 100
         },
         {
             title: "Aman Rai",
-            description: "The Rai of Aman",
+            description: "Vice President & Co-founder",
+			img: "team/aman_rai.png",
             delay: 200
         },
         {
-            title: "Nirbhay",
-            description: "Just Nirbhay",
-            delay: 200
+            title: "Nirbhay Challa",
+            description: "Vice President & Co-founder",
+			img: "team/nirbhay_challa.png",
+            delay: 300
         },
     ];
 </script>
@@ -39,9 +42,9 @@
         <h2 in:fly={{ y: 20, duration: 600 }}>Our Team</h2>
         <div class="team-grid">
             {#each officers as officer}
-                <div class="officer-card glass" in:fly={{ y: 20, duration: 600, delay: officer.delay }}>
+                <div class="officer-card glass" in:fly|global={{ y: 20, duration: 600, delay: officer.delay }}>
                     <h3>{officer.title}</h3>
-                    <img src="images/hero-bg.jpg"/>
+                    <img src={officer.img}/>
                     <p style="line-height: 0;">{officer.description}</p>
                 </div>
             {/each}
@@ -83,7 +86,7 @@
     }
 
     .officer-card img {
-        height: 250px;
+        height: 320px;
         width: 240px;
         border-radius: var(--border-radius);
         object-fit: cover;

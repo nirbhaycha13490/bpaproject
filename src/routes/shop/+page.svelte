@@ -49,19 +49,20 @@
         
     ];
 
-    // Load Sellix Embed Scripts Dynamically
-    if (typeof window !== 'undefined') {
-        const sellixScript = document.createElement('script');
-        sellixScript.src = "https://cdn.sellix.io/static/js/embed.js";
-        sellixScript.async = true;
-        document.head.appendChild(sellixScript);
+    // // Load Sellix Embed Scripts Dynamically
+    // if (typeof window !== 'undefined') {
+    //     const sellixScript = document.createElement('script');
+    //     sellixScript.src = "https://cdn.sellix.io/static/js/embed.js";
+    //     sellixScript.async = true;
+    //     document.head.appendChild(sellixScript);
 
-        const sellixStyle = document.createElement('link');
-        sellixStyle.rel = "stylesheet";
-        sellixStyle.href = "https://cdn.sellix.io/static/css/embed.css";
-        document.head.appendChild(sellixStyle);
-    }
+    //     const sellixStyle = document.createElement('link');
+    //     sellixStyle.rel = "stylesheet";
+    //     sellixStyle.href = "https://cdn.sellix.io/static/css/embed.css";
+    //     document.head.appendChild(sellixStyle);
+    // }
 </script>
+
 
 <div class="container">
     <section class="hero">

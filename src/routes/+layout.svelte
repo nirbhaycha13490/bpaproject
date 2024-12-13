@@ -83,7 +83,7 @@
                                 <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
                             </svg>
                         </a>
-                        <a href="https://www.remind.com/classes/reedytame" target="_blank" rel="noopener" aria-label="Discord" class="glass-hover">
+                        <a href="https://www.remind.com/classes/reedytame" target="_blank" rel="noopener" aria-label="Remind" class="glass-hover">
                             <img src="socials/remind.svg" width="24" height="24" style="color: var(--text-secondary)" />
                         </a>
                         <a href="mailto:reedyengineeringclub@gmail.com" aria-label="Email" class="glass-hover">
@@ -92,7 +92,7 @@
                                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
                             </svg>
                         </a>
-						<a href="https://www.tame.org/" target="_blank" rel="noopener" aria-label="Discord" class="glass-hover">
+						<a href="https://www.tame.org/" target="_blank" rel="noopener" aria-label="TAME" class="glass-hover">
                             <img src="socials/tame.png" height="24" style="color: var(--text-secondary)" />
                         </a>
                     </div>

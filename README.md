@@ -1,18 +1,11 @@
-# sv
+# Reedy Engineering Club Source Code
 
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
-## Creating a project
+## Setup
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
-```
+This project uses [Bun](https://bun.sh/) instead of NPM, but both are for the most part interchangeable.
+We recommend using `bun install` instead of `npm install` in case some packages don't install properly with regular npm.
 
 ## Developing
 

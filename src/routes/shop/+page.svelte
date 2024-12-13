@@ -1,6 +1,15 @@
 <script lang="ts">
     import { fly } from 'svelte/transition';
-    import { ShoppingCart, Tag, Box, Plus, Minus } from 'lucide-svelte';
+    import { Tag, Plus, Minus } from 'lucide-svelte';
+	import { browser } from '$app/environment';
+
+	function getSessionStorage(field: string) {
+		if (browser) return window.sessionStorage.getItem(field);
+	}
+
+	function setSessionStorage(field: string, value: string) {
+		if (browser) return window.sessionStorage.setItem(field, value);
+	}
 
     interface ProductCard {
         name: string,
@@ -9,6 +18,7 @@
         image: string,
         sizes: string[]
     }
+
     const products: ProductCard[] = [
         {
             name: 'T-Shirt',
@@ -66,24 +76,39 @@
         qty: number
     }
 
-	let checkout: ShopItem[] = [];
+	let checkout: ShopItem[] = JSON.parse(getSessionStorage("checkout") || "[]");
+	console.log(checkout);
+	let total = 0;
+
+	function updateTotal() {
+		setSessionStorage('checkout', JSON.stringify(checkout));
+		total = 0;
+
+		for (const item of checkout) {
+			total += products[item.index].price * item.qty;
+		}
+	}
+	updateTotal();
 
     function addItem(index: number, size: string) {
         // If we are buying two of the same items, then combine the items
         for (let i = 0; i < checkout.length; i++) {
             if (checkout[i].index === index && checkout[i].size === size) {
-                checkout[i].qty++;
+                checkout[i].qty = Math.min(checkout[i].qty + 1, 10);
+				updateTotal();
                 return;
             }
         }
 
         checkout.push({ index: index, size: size, qty: 1 });
         checkout = checkout; // To make checkout reactive
+		updateTotal();
     }
 
     function addQty(index: number, amount: number) {
-        checkout[index].qty += amount;
+        checkout[index].qty = Math.min(checkout[index].qty + amount, 10);
         if (checkout[index].qty <= 0) checkout.splice(index, 1);
+		updateTotal();
     }
 
     // // Load Sellix Embed Scripts Dynamically
@@ -107,6 +132,46 @@
         <p class="subtitle">Support our club and get awesome gear</p>
     </section>
 
+	<section style="text-align: center; margin-bottom: var(--space-16);">
+		<div class="checkout" in:fly={{ y: 20, duration: 600 }}>
+			<h2>Shopping Cart</h2>
+            {#if checkout.length === 0}<p transition:fly={{ y: -30, duration: 600 }}>You haven't added anything yet!</p>{/if}
+			<div class="checkout-grid">
+				{#each checkout as item, i}
+					<div class="checkout-item glass" transition:fly|global={{ y: 20, duration: 600 }}>
+						<img src={products[item.index].image} alt="Icon"/>
+						<div class="checkout-item-right">
+							<div class="checkout-item-top">
+								<h3>{products[item.index].name}</h3>
+								<h3 style="color: var(--primary);">${(products[item.index].price * item.qty).toFixed(2)}</h3>
+							</div>
+							<div class="checkout-item-bottom">
+								<p style="margin: 0;">Size {item.size}</p>
+								<div class="checkout-qty">
+									<button class="checkout-qty-decrease" onclick={() => addQty(i, -1)}>
+										<div class="feature-icon"><Minus size={24} /></div>
+									</button>
+									<h3>{item.qty}</h3>
+									<button class="checkout-qty-increase" onclick={() => addQty(i, 1)}>
+										<div class="feature-icon"><Plus size={24} /></div>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				{/each}
+			</div>
+            {#if checkout.length > 0}
+                <div><!-- prevent inline-flex from flexing the parent divs -->
+					<div class="process" transition:fly={{ y: 40, duration: 600 }}>
+						<h3>Total: ${total.toFixed(2)} + Tax</h3>
+                    	<button class="buy-button">Checkout</button>
+					</div>
+                </div>
+            {/if}
+		</div>
+	</section>
+
     <section class="products">
         <div class="products-grid">
             {#each products as product, i}
@@ -128,14 +193,6 @@
                                 {/each}
                             </div>
                         {/if}
-
-                        <!-- <button class="buy-button"
-                            data-sellix-product="{product.id}"
-                            type="submit"
-                            alt="Buy Now with sellix.io">
-                            Purchase
-                        </button> -->
-						<!-- <button class="buy-button" type="submit" onclick={() => addItem(i, "M")}>Add to Cart</button> -->
                     </div>
                 </div>
             {/each}
@@ -165,44 +222,6 @@
             </div>
         </div>
     </section> -->
-
-	<section style="text-align: center;">
-		<div class="checkout" in:fly={{ y: 20, duration: 600 }}>
-			<h2>Shopping Cart</h2>
-            {#if checkout.length === 0}<p transition:fly={{ y: -30, duration: 600 }}>You haven't added anything yet!</p>{/if}
-			<div class="checkout-grid">
-				{#each checkout as item, i}
-					<div class="checkout-item glass" transition:fly|global={{ y: 20, duration: 600 }}>
-						<img src={products[item.index].image} alt="Icon"/>
-						<div class="checkout-item-right">
-							<div class="checkout-item-top">
-								<h3>{products[item.index].name}</h3>
-								<h3 style="color: var(--primary);">${products[item.index].price * item.qty}</h3>
-							</div>
-							<div class="checkout-item-bottom">
-								<p style="margin: 0;">Size {item.size}</p>
-								<div class="checkout-qty">
-									<button class="checkout-qty-decrease" onclick={() => addQty(i, -1)}>
-										<div class="feature-icon"><Minus size={24} /></div>
-									</button>
-									<h3>{item.qty}</h3>
-									<button class="checkout-qty-increase" onclick={() => addQty(i, 1)}>
-										<div class="feature-icon"><Plus size={24} /></div>
-									</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				{/each}
-			</div>
-            {#if checkout.length > 0}
-                <div class="process">
-                    <h3 style="color: var(--primary);">Total: $29.33</h3>
-                    <button class="buy-button">Proceed to Checkout</button>
-                </div>
-            {/if}
-		</div>
-	</section>
 </div>
 
 <style>
@@ -306,6 +325,8 @@
         border-radius: var(--border-radius-lg);
         cursor: pointer;
         font-weight: 500;
+		font-size: var(--text-base);
+		font-family: inherit;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -356,7 +377,6 @@
         transition: all var(--transition);
 		padding: var(--space-6);
 		display: inline-flex;
-		margin-bottom: var(--space-2);
     }
 
 	.checkout {
@@ -372,8 +392,12 @@
     }
 
     .checkout-grid {
-        display: inline-grid;
+        display: grid;
         position: relative;
+		gap: var(--space-4);
+		grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
+		margin-bottom: var(--space-4);
+		justify-content: center;
     }
 
 	.checkout-item-right {
@@ -440,11 +464,16 @@
         margin-right: var(--space-6);
         align-self: center;
 	}
-    
-    .process {
-        display: inline-flex;
 
-    }
+	.process {
+		display: inline-flex
+	}
+
+	.process > h3 {
+		color: var(--primary);
+		text-wrap: nowrap;
+		margin: auto var(--space-4) auto 0;
+	}
 
     @media (max-width: 768px) {
         .hero {

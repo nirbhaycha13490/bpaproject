@@ -177,7 +177,7 @@
             {#each products as product, i}
                 <div class="product-card glass" in:fly|global={{ y: 20, duration: 600, delay: (i + 1) * 100 }}>
                     <div class="product-image">
-                        <img src={product.image} alt={product.name} />
+                        <img src={product.image} alt={product.description} />
                         <div class="price-tag">
                             <Tag size={16} />
                             <span>${product.price}</span>

@@ -23,48 +23,48 @@
         {
             name: 'T-Shirt',
             price: 8.99,
-            description: 'Blue cotton t-shirt',
-            image: "shop/shirt1.png",
+            description: 'Red t-shirt',
+            image: "shop/stshirt1.png",
             sizes: ['S', 'M', 'L', 'XL'],
             //id: '675a08763ac33',
         },
 		{
-            name: 'Shirt',
+            name: 'T-Shirt',
             price: 8.99,
-            description: 'Yellow cotton shirt',
-            image: "shop/shirt2.png",
+            description: 'Black t-shirt',
+            image: "shop/stshirt2.png",
             sizes: ['S', 'M', 'L', 'XL'],
             //id: '675a08763ac33',
         },
         {
             name: 'Shorts',
             price: 4.99,
-            description: 'Blue cotton shorts',
-            image: "shop/pants1.png",
+            description: 'Light Gray shorts',
+            image: "shop/stshorts.png",
             sizes: ['S', 'M', 'L', 'XL'],
             //id: '675a0887a0102',
         },
         {
-            name: 'Sweater',
+            name: 'Quarter Zip',
             price: 11.99,
-            description: 'Grey sweatshirt',
-            image: "shop/sweatshirt1.png",
+            description: 'Black Quarter Zip',
+            image: "shop/stsweatshirt.png",
             sizes: ['S', 'M', 'L', 'XL'],
             //id: '675a088b74d4e',
         },
         {
             name: 'Pants',
             price: 8.00,    
-            description: 'Light grey sweatpants',
-            image: "shop/sweatpants1.png",
+            description: 'Black sweatpants',
+            image: "shop/stsweatpants.png",
             sizes: ['S', 'M', 'L', 'XL'],
             //id: '675a0ae01ac60',
         },
         {
             name: 'Hoodie',
             price: 8.00,    
-            description: 'White hoodie sweatshirt',
-            image: "shop/hoodie1.png",
+            description: 'Dark Gray Hoodie ',
+            image: "shop/sthoodie.png",
             sizes: ['S', 'M', 'L', 'XL'],
             //id: '675a0bd184ef7',
         },
@@ -128,8 +128,8 @@
 
 <div class="container">
     <section class="hero" in:fly={{ y: 20, duration: 600 }}>
-        <h1 class="text-gradient">Club Shop</h1>
-        <p class="subtitle">Support our club and get awesome gear</p>
+        <h1 class="text-gradient">Merch Store</h1>
+        <p class="subtitle">Support our band and get awesome gear</p>
     </section>
 
 	<section style="text-align: center; margin-bottom: var(--space-16);">

@@ -5,29 +5,86 @@
 
 <div class="container">
     <section class="hero" in:fly={{ y: 20, duration: 600 }}>
-        <h2>Next Meeting</h2>
-        <div class="meeting-info">
-            <h1 style="color: var(--primary);">January 1, 2025</h1>
-            <h3>Mr. Patton's room</h3>
-            <h3>B213 @ Advisory</h3>
+        <h2>Next Concert</h2>
+        <div class="meeting-info" in:fly={{ y: 20, duration: 600, delay: 200 }}>
+            <center><h1 style="color: var(--primary);">January 20, 2025</h1></center>
+            <center><h3>Madison Square Garden</h3></center>
+            <center><h5>New York City, New York</h5></center>
+            <center>
+                <img 
+                    src="concert locations/madisonsquare.png" 
+                    alt="Madison Square Garden" 
+                    style="width: 100%; max-width: 600px; margin-top: var(--space-4); border-radius: var(--border-radius-lg);"
+                />
+            </center>
         </div>
     </section>
 
-    <section class="slides">
-        <h2 in:fly={{ y: 20, duration: 600, delay: 100 }}>Past Meeting Slides</h2>
-        <div class="slides-grid grid">
-            <Slide
-                src="10-10-2024" 
-                date="October 10, 2024"
-                delay={200}
+    <br>
+    <center><h4 in:fly={{ y: 20, duration: 500, delay: 300 }}> | </h4></center>
+    <center><h4 in:fly={{ y: 20, duration: 500, delay: 400 }}> | </h4></center>
+    <center><h4 in:fly={{ y: 20, duration: 500, delay: 500 }}> | </h4></center>
+    <center><h4 in:fly={{ y: 20, duration: 500, delay: 600 }}> | </h4></center>
+    <center><h4 in:fly={{ y: 20, duration: 500, delay: 700 }}> | </h4></center>
+    <center><h4 in:fly={{ y: 20, duration: 500, delay: 800 }}> | </h4></center>
+    <center><h4 in:fly={{ y: 20, duration: 500, delay: 900 }}> V </h4></center>
+
+    <div class="meeting-info" in:fly={{ y: 20, duration: 600, delay: 1000 }}>
+        <center><h1 style="color: var(--primary);">February 10, 2025</h1></center>
+        <center><h3>Red Rock Amphitheater</h3></center>
+        <center><h5>Morrison, Colorado</h5></center>
+        <center>
+            <img 
+                src="concert locations/redrock.png" 
+                alt="Red Rock Amphitheater" 
+                style="width: 100%; max-width: 600px; margin-top: var(--space-4); border-radius: var(--border-radius-lg);"
             />
-            <Slide 
-                src="11-14-2024" 
-                date="November 14, 2024"
-                delay={300}
+        </center>
+    </div>
+
+    <br>
+    <center><h4 in:fly={{ y: 20, duration: 500, delay: 1100 }}> | </h4></center>
+    <center><h4 in:fly={{ y: 20, duration: 500, delay: 1200 }}> | </h4></center>
+    <center><h4 in:fly={{ y: 20, duration: 500, delay: 1300 }}> | </h4></center>
+    <center><h4 in:fly={{ y: 20, duration: 500, delay: 1400 }}> | </h4></center>
+    <center><h4 in:fly={{ y: 20, duration: 500, delay: 1500 }}> | </h4></center>
+    <center><h4 in:fly={{ y: 20, duration: 500, delay: 1600 }}> | </h4></center>
+    <center><h4 in:fly={{ y: 20, duration: 500, delay: 1700 }}> V </h4></center>
+
+    <div class="meeting-info" in:fly={{ y: 20, duration: 600, delay: 1800 }}>
+        <center><h1 style="color: var(--primary);">March 2, 2025</h1></center>
+        <center><h3>American Airlines Center</h3></center>
+        <center><h5>Dallas, Texas</h5></center>
+        <center>
+            <img 
+                src="concert locations/americanairlines.png" 
+                alt="American Airlines Center" 
+                style="width: 100%; max-width: 600px; margin-top: var(--space-4); border-radius: var(--border-radius-lg);"
             />
-        </div>
-    </section>
+        </center>
+    </div>
+
+    <br>
+    <center><h4 in:fly={{ y: 20, duration: 500, delay: 1900 }}> | </h4></center>
+    <center><h4 in:fly={{ y: 20, duration: 500, delay: 2000 }}> | </h4></center>
+    <center><h4 in:fly={{ y: 20, duration: 500, delay: 2100 }}> | </h4></center>
+    <center><h4 in:fly={{ y: 20, duration: 500, delay: 2200 }}> | </h4></center>
+    <center><h4 in:fly={{ y: 20, duration: 500, delay: 2300 }}> | </h4></center>
+    <center><h4 in:fly={{ y: 20, duration: 500, delay: 2400 }}> | </h4></center>
+    <center><h4 in:fly={{ y: 20, duration: 500, delay: 2500 }}> V </h4></center>
+
+    <div class="meeting-info" in:fly={{ y: 20, duration: 600, delay: 2600 }}>
+        <center><h1 style="color: var(--primary);">April 23, 2025</h1></center>
+        <center><h3>The Forum</h3></center>
+        <center><h5>Los Angeles, California</h5></center>
+        <center>
+            <img 
+                src="concert locations/theforum.png" 
+                alt="The Forum" 
+                style="width: 100%; max-width: 600px; margin-top: var(--space-4); border-radius: var(--border-radius-lg);"
+            />
+        </center>
+    </div>
 </div>
 
 <style>
@@ -40,84 +97,15 @@
         margin-bottom: var(--space-4);
     }
 
-    .hero p {
-        color: var(--text-secondary);
-        font-size: var(--text-xl);
-        max-width: 600px;
-        margin: 0 auto;
-    }
-
     .meeting-info {
         display: flex;
         flex-direction: column;
         gap: var(--space-2);
-    }
-
-    .meeting-info h2 {
-        line-height: 1;
-        color: var(--text-primary);
-    }
-
-    .slides {
-        padding: var(--space-16) 0;
-    }
-
-    .slides h2 {
-        text-align: center;
-        margin-bottom: var(--space-8);
-        font-size: var(--text-3xl);
-    }
-
-    .slides-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: var(--space-8);
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    .slides-container {
-        width: 100%;
-        height: 600px;
-        position: relative;
-        overflow: hidden;
-        border-radius: var(--border-radius-lg);
-        margin-bottom: var(--space-4);
-    }
-
-    .slides-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: none;
-    }
-
-    .card {
-        padding: var(--space-6);
-        margin-bottom: var(--space-6);
-        border-radius: var(--border-radius-xl);
-    }
-
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: var(--space-6);
-        margin-bottom: var(--space-8);
-    }
+    } 
 
     @media (max-width: 768px) {
         .hero {
             padding: var(--space-8) 0;
-        }
-
-        .slides {
-            padding: var(--space-8) 0;
-        }
-
-        .slides-container {
-            height: 400px;
         }
     }
 </style>

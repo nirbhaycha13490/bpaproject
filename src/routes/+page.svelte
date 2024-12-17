@@ -31,31 +31,22 @@
     <section class="hero">
         <div class="hero-content" in:fly={{ y: 20, duration: 600 }}>
             <h1>
-                <span class="text-accent">Engineering</span>
-                <span class="text-gradient">for the community</span>
+                <span class="text-accent">Rock </span>
+                <span class="text-gradient">for the Masses</span>
             </h1>
-            <p class="hero-text">Join us on our mission to shape the future of engineering and innovation.</p>
+            <p class="hero-text">"With Stage Fright, the lights shine brighter, the beats hit harder, and the crowd roars louder."
+            </p>
             <div class="cta-buttons">
-                <a href="/meetings" class="button primary">Join Us</a>
-                <a href="/about" class="button secondary">Learn More</a>
+                <a href="/about" class="button primary">Learn More</a>
+                <a href="/contact" class="button secondary">Contact Us</a>
+
             </div>
         </div>
     </section>
-
-    <section class="features">
-        <h2 in:fly={{ y: 20, duration: 600 }}>What We Do</h2>
-        <div class="features-grid">
-            {#each features as feature}
-                <div class="feature-card glass" in:fly|global={{ y: 20, duration: 600, delay: feature.delay }}>
-                    <div class="feature-icon">
-                        <svelte:component this={feature.icon} size={32} />
-                    </div>
-                    <h3>{feature.title}</h3>
-                    <p>{feature.description}</p>
-                </div>
-            {/each}
-        </div>
-    </section>
+    <center><h2> Welcome</h2></center>
+    <center><p>Hello, and welcome to Stage Fright, the hottest up-and-coming rock band! Stage Fright is an exciting new powerhouse of modern rock, combining electrifying guitar riffs, powerful vocals, and unique percussion to build songs unlike anything else. Every performance by Stage Fright isn’t just a concert; it’s a complete experience. With great music, charismatic band members, and a connection with the crowd, Stage Fright sets itself apart from its competitors to create a unique escapade that will leave a lasting impact. So, turn up the volume, feel the energy, and join the movement—because the music doesn’t just play with Stage Fright. It hits.
+        </p></center>
+    
 	<!--
     <section class="projects">
         <h2>Latest Projects</h2>
@@ -87,19 +78,19 @@
 
     <section class="join">
         <div class="join-content glass" in:fly={{ y: 20, duration: 600 }}>
-            <h2>Ready to Join?</h2>
-            <p>Be part of something amazing. Join us in our next meeting and start your engineering journey.</p>
+            <h2>Feel the Rhythm, Join the Movement            </h2>
+            <p>Experience the energy, passion, and unforgettable performances of Stage Fright – join us and be part of the movement that's redefining rock music for the masses.            </p>
             <div class="join-details">
                 <div class="detail">
-                    <h4>When</h4>
-                    <p>Every Other Friday @ Advisory</p>
+                    <h4>Next Concert</h4>
+                    <p>January 20, 2025                    </p>
                 </div>
                 <div class="detail">
                     <h4>Where</h4>
-                    <p>Room B213</p>
+                    <p>Madison Square Garden, NY                    </p>
                 </div>
             </div>
-            <a href="/meetings" class="button primary">View Schedule</a>
+            <a href="/meetings" class="button primary">View Tour Dates</a>
         </div>
     </section>
 </div>
@@ -169,9 +160,7 @@
         transform: translateY(-2px);
     }
 
-    .features {
-        padding: var(--space-16) 0;
-    }
+
 
     h2 {
         text-align: center;
@@ -179,91 +168,6 @@
         font-size: var(--text-3xl);
     }
 
-    .features-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: var(--space-6);
-    }
-
-    .feature-card {
-        padding: var(--space-6);
-        border-radius: var(--border-radius-2xl);
-        text-align: center;
-        transition: transform var(--transition);
-    }
-
-    .feature-card:hover {
-        transform: translateY(-4px);
-    }
-
-    .feature-icon {
-        width: 64px;
-        height: 64px;
-        margin: 0 auto var(--space-4);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        background: var(--surface-100);
-        color: var(--primary);
-    }
-
-    .feature-card h3 {
-        margin: 0 0 var(--space-2);
-        font-size: var(--text-xl);
-    }
-
-    .feature-card p {
-        color: var(--text-secondary);
-        line-height: 1.6;
-    }
-
-    .projects {
-        padding: var(--space-16) 0;
-    }
-
-    .projects-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: var(--space-6);
-    }
-
-    .project-card {
-        border-radius: var(--border-radius-2xl);
-        overflow: hidden;
-        transition: transform var(--transition);
-    }
-
-    .project-card:hover {
-        transform: translateY(-4px);
-    }
-
-    .project-image {
-        width: 100%;
-        height: 200px;
-        overflow: hidden;
-    }
-
-    .project-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .project-content {
-        padding: var(--space-6);
-    }
-
-    .project-content h3 {
-        margin: 0 0 var(--space-2);
-        font-size: var(--text-xl);
-    }
-
-    .project-content p {
-        color: var(--text-secondary);
-        margin: 0;
-        line-height: 1.6;
-    }
 
     .join {
         padding: var(--space-16) 0;
@@ -303,25 +207,13 @@
         margin: 0;
     }
 
-    .test-image {
-        width: 300px;
-        height: 300px;
-        margin: 20px;
-    }
-    .test-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
 
     @media (max-width: 768px) {
         .hero {
             padding: var(--space-8) 0;
         }
 
-        .features, .projects, .join {
-            padding: var(--space-8) 0;
-        }
+
 
         h2 {
             margin-bottom: var(--space-8);

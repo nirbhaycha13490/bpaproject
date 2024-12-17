@@ -6,7 +6,7 @@
 <div class="container">
     <section class="hero" in:fly={{ y: 20, duration: 600 }}>
         <h1 class="text-gradient">Contact Us</h1>
-        <p class="subtitle">Get in touch with our team</p>
+        <p class="subtitle">Get in touch with us</p>
     </section>
 
     <section class="contacts">
@@ -17,8 +17,8 @@
                         <Mail size={32} />
                     </div>
                     <h3>Email</h3>
-                    <p style="line-height: 3.2;">reedyengineeringclub@gmail.com</p>
-                    <a href="mailto:reedyengineeringclub@gmail.com" class="contact-button">
+                    <p style="line-height: 3.2;">stagefright202@gmail.com</p>
+                    <a href="mailto:stagefright202@gmail.com" class="contact-button">
                         Send Email
                     </a>
                 </div>
@@ -29,10 +29,10 @@
                     <div class="icon-wrapper">
                         <MapPin size={32} />
                     </div>
-                    <h3>Location</h3>
-                    <p>Room B213<br>Reedy High School</p>
-                    <a href="https://maps.app.goo.gl/jDCK49aXdaBVeiXr8" target="_blank" class="contact-button">
-                        View Map
+                    <h3>Booking Link</h3>
+                    <p>Schedule a meeting<br>with us</p>
+                    <a href="https://www.signupgenius.com/go/10C0A45ACAC23A5FFC52-54084628-book#/" target="_blank" class="contact-button">
+                        Book Meeting
                     </a>
                 </div>
             </div>
@@ -42,27 +42,14 @@
                     <div class="icon-wrapper">
                         <Clock size={32} />
                     </div>
-                    <h3>Meeting Times</h3>
-                    <p>Every Other Friday<br>During Advisory</p>
-                    <a href="/meetings" class="contact-button">
+                    <h3>Customer Service Link</h3>
+                    <p>Contact us for customer<br>service inquiries</p>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeTxmpwZYiYqzjs0vabLii3oflF6yFUi2OIw_Etk0050MZGOw/viewform?usp=header" target="_blank" class="contact-button">
                         View Schedule
                     </a>
                 </div>
             </div>
-
-            <div class="contact-card glass" in:fly={{ y: 20, duration: 600, delay: 400 }}>
-                <div class="card-content">
-                    <div class="icon-wrapper">
-                        <Users size={32} />
-                    </div>
-                    <h3>Social</h3>
-                    <p>Follow us on social media<br>for updates</p>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/reedyengineering/" class="contact-button">Instagram</a>
-                        <a href="https://www.remind.com/classes/reedytame" class="contact-button">Remind</a>
-                    </div>
-                </div>
-            </div>
+ 
         </div>
     </section>
 </div>
@@ -143,10 +130,6 @@
         box-shadow: 0 4px 12px var(--primary-hover);
     }
 
-    .social-links {
-        display: flex;
-        gap: var(--space-4);
-    }
 
     @media (max-width: 768px) {
         .hero {

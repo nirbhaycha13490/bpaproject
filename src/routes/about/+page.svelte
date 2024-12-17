@@ -3,23 +3,26 @@
 
     const officers = [
         {
-            title: 'Saksham Shukla',
-            description: 'President & Founder',
-			img: "team/saksham_shukla.png",
-            delay: 100
+            title: 'Jonathan Henry',
+            description: 'Vocalist',
+            img: "team/vocalist.png",
+            delay: 100,
+            additionalText: 'The voice that commands the band, bringing raw passion and talent to every vocalist. He spends his free time tuning the art of rock. But, he strives for perfection and settles for nothing less, causing constant artistic disputes as the band argues about perfecting the music. His hobbies include soccer, tennis, and working on his car.'
         },
         {
-            title: "Aman Rai",
-            description: "Vice President & Co-founder",
-			img: "team/aman_rai.png",
-            delay: 200
+            title: "Doug Green",
+            description: "Guitarist",
+            img: "team/singer.png",
+            delay: 200,
+            additionalText: 'A master of solos and strings, creating the unique musical background the band prides itself upon. He’s known for being the negotiator for the band, willing to give and take to make sure the sound is as good as can be. He also is a chill guy to hang out with, preferring to watch movies and read books.'
         },
         {
-            title: "Nirbhay Challa",
-            description: "Vice President & Co-founder",
-			img: "team/nirbhay_challa.png",
-            delay: 300
-        },
+            title: "Thomas Patton",
+            description: "Drummer",
+            img: "team/drummer.png",
+            delay: 300,
+            additionalText: 'The heartbeat of the band, pounding every song with passion and precision to make the ultimate beat. He often stands against Jonathan, disagreeing with his vocal-heavy songs and insisting upon the importance of drums. When he’s not making music, he loves restoring vintage drum kits, exploring nature, and experimenting with percussion.'
+        }
     ];
 </script>
 
@@ -27,90 +30,132 @@
     <section class="hero">
         <div in:fly={{ y: 20, duration: 600 }}>
             <h1 class="text-gradient">About Us</h1>
-            <p>The Reedy TAME Engineering Club inspires students to explore STEM through hands-on projects, innovative problem-solving, and collaboration. We foster a supportive environment where members can develop critical skills, build connections, and prepare for future careers in engineering and beyond.</p>
+            <p>Stage Fright is a high-energy rock band redefining the music scene with its raw and electrifying performances. Founded with a shared passion for music, the band is making significant waves in the industry, and its new releases are shaking up the scene. The band got its first gigs playing for local events in its humble small town but has since taken to the stars with massive success. Today, they are changing the game for the rock genre, performing at much larger venues and captivating their crowds with unforgettable experiences.
+                Born from late-night jam sessions in a quaint suburban garage, Stage Fright takes its roots from a dedicated group of friends who refused to dream small. Founded in 2020 in Frisco, TX, the band was inspired by legends such as Nirvana, Led Zeppelin, and Guns N’ Roses. When it came time to choose a name, it seemed to write itself, as during their first-ever performance, they complained of stage fright before giving a performance described as the “best I’ve ever heard” by local newspaper reporter Robert Dahl. Their story is simple yet powerful, showing the sheer power that anyone has when they put their mind to something.
+            </p>
         </div>
         <div in:fly={{ y: 20, duration: 600, delay: 100 }}>
-            <h2>About TAME</h2>
-            <p>TAME programs depend on the support of over 800 volunteers from local STEM industries, schools, libraries, and communities. The TAME State Office is staffed by dedicated professionals who coordinate TAME's day-to-day work, support Club Leaders and Region activities, and plan for the organization’s long-term growth.</p>    
-        </div>
-        <div in:fly={{ y: 20, duration: 600, delay: 200 }}>
-            <h2>TAME's Misson</h2>
-            <p>TAME creates equitable experiences for students from underrepresented groups to explore futures in engineering by fostering their sense of belonging and equipping them with knowledge, skills, and intergenerational support through statewide programming at no cost to students.</p>
+            <h2>Our band members</h2>
+            <p>Each member of Stage Fright brings their unique energy and talent to the band, helping form a cohesive and united sound that cannot be replicated anywhere else:            </p>    
         </div>
     </section>
     <section class="team">
         <div class="team-grid">
             {#each officers as officer}
                 <div class="officer-card glass" in:fly|global={{ y: 20, duration: 600, delay: officer.delay }}>
-                    <h3>{officer.title}</h3>
-                    <img src={officer.img}/>
-                    <p style="line-height: 0;">{officer.description}</p>
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h3>{officer.title}</h3>
+                            <img src={officer.img} alt="{officer.title}" />
+                            <p>{officer.description}</p>
+                        </div>
+                        <div class="card-back">
+                            <h3>{officer.title}</h3>
+                            <p>{officer.additionalText}</p>
+                        </div>
+                    </div>
                 </div>
             {/each}
         </div>
     </section>
 </div>
 
+
 <style>
+.hero {
+    padding: var(--space-16) 0 0 0;
+    text-align: center;
+}
+
+.hero > div {
+    margin-bottom: var(--space-12);
+}
+
+.team {
+    margin-bottom: var(--space-36); /* Add more space below the team section */
+    position: relative; /* Ensure stacking context */
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-6);
+    place-content: center;
+    margin-top: var(--space-6);
+}
+
+.officer-card {
+    position: relative;
+    z-index: 1; /* Prevent cards from appearing over unrelated sections */
+    perspective: 1000px;
+    min-height: 420px; /* Ensure enough space for flipped content */
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.officer-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    top: 0; /* Align to the top of parent */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: var(--border-radius-2xl);
+    padding: var(--space-8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-4);
+}
+
+.card-back {
+    background: var(--surface-200);
+    transform: rotateY(180deg);
+}
+
+.officer-card img {
+    height: 320px;
+    width: 240px;
+    border-radius: var(--border-radius);
+    object-fit: cover;
+}
+
+h2 {
+    text-align: center;
+    font-size: var(--text-3xl);
+}
+
+h3 {
+    margin: 0;
+    font-size: var(--text-xl);
+}
+
+p {
+    color: var(--text-secondary);
+    font-size: var(--text-lg);
+    margin-top: var(--space-4);
+    line-height: 2.4;
+}
+
+@media (max-width: 768px) {
     .hero {
-        padding: var(--space-16) 0 0 0;
-        text-align: center;
+        padding: var(--space-8) 0;
     }
 
-    .hero > div {
-        margin-bottom: var(--space-12);
+    .team {
+        margin-bottom: var(--space-20); /* Reduce space on smaller screens */
     }
-
-    .team-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: var(--space-6);
-        place-content: center;
-        margin-top: var(--space-6);
-    }
-
-    .officer-card {
-        border-radius: var(--border-radius-2xl);
-        padding: var(--space-8);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: var(--space-4);
-    }
-
-    .card-back {
-        background: var(--surface-200);
-        transform: rotateY(180deg);
-    }
-
-    .officer-card img {
-        height: 320px;
-        width: 240px;
-        border-radius: var(--border-radius);
-        object-fit: cover;
-    }
-
-    h2 {
-        text-align: center;
-        font-size: var(--text-3xl);
-    }
-
-    h3 {
-        margin: 0;
-        font-size: var(--text-xl);
-    }
-
-    p {
-        color: var(--text-secondary);
-        font-size: var(--text-lg);
-        margin-top: var(--space-4);
-        line-height: 2.4;
-    }
-
-    @media (max-width: 768px) {
-        .hero {
-            padding: var(--space-8) 0;
-        }
-    }
+}
 </style>

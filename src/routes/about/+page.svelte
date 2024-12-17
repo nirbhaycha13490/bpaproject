@@ -39,7 +39,6 @@
         </div>
     </section>
     <section class="team">
-        <h2 in:fly={{ y: 20, duration: 600 }}>Our Team</h2>
         <div class="team-grid">
             {#each officers as officer}
                 <div class="officer-card glass" in:fly|global={{ y: 20, duration: 600, delay: officer.delay }}>
@@ -72,7 +71,6 @@
 
     .officer-card {
         border-radius: var(--border-radius-2xl);
-        transition: transform var(--transition);
         padding: var(--space-8);
         display: flex;
         flex-direction: column;
@@ -81,8 +79,9 @@
         gap: var(--space-4);
     }
 
-    .officer-card:hover {
-        transform: translateY(-4px);
+    .card-back {
+        background: var(--surface-200);
+        transform: rotateY(180deg);
     }
 
     .officer-card img {

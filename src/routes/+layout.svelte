@@ -32,7 +32,7 @@
         <nav class="container">
             <a href="/" class="logo">
                 <div class="logo-container">
-                    <span class="text-gradient" style="font-size: 24px;">Reedy Engineering Club</span>
+                    <span class="text-gradient" style="font-size: 30px;">Stage Fright</span>
 
                 </div>
             </a>
@@ -40,8 +40,8 @@
             <div class="nav-links" class:open={isMenuOpen}>
                 <a href="/" class="nav-link">Home</a>
                 <a href="/about" class="nav-link">About</a>
-                <a href="/meetings" class="nav-link">Meetings</a>
-                <a href="/shop" class="nav-link">Shop</a>
+                <a href="/meetings" class="nav-link">Tour Dates</a>
+                <a href="/shop" class="nav-link">Merch</a>
                 <a href="/contact" class="nav-link">Contact</a>
             </div>
 
@@ -72,47 +72,46 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>
-                        <span class="text-gradient" style="font-size: var(--text-2xl)">Reedy Engineering Club</span>
+                        <span class="text-gradient" style="font-size: var(--text-2xl)">Stage Fright</span>
                     </h3>
-                    <p>Engineering for the Community</p>
+                    <p>Rock for the Masses</p>
                     <div class="social-links">
-                        <a href="https://www.instagram.com/reedyengineering/" target="_blank" rel="noopener" aria-label="Instagram" class="glass-hover">
+                        <a href="https://www.instagram.com/stage_fright202/profilecard/?igsh=MXYzNHBqdDRwdDJzbw==" target="_blank" rel="noopener" aria-label="Instagram" class="glass-hover">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
                                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
                                 <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
                             </svg>
                         </a>
-                        <a href="https://www.remind.com/classes/reedytame" target="_blank" rel="noopener" aria-label="Remind" class="glass-hover">
-                            <img src="socials/remind.svg" width="24" height="24" style="color: var(--text-secondary)" />
+                        <a href="https://www.tiktok.com/@stage.fright4?_t=ZP-8sHesua5oa6&_r=1" target="_blank" rel="noopener" aria-label="TikTok" class="glass-hover">
+                            <img src="socials/TikTok.png" alt = tiktok width="40" height="24" style="color: var(--text-secondary)" />
                         </a>
-                        <a href="mailto:reedyengineeringclub@gmail.com" aria-label="Email" class="glass-hover">
+                        <a href="mailto:stagefright202@gmail.com" aria-label="Email" class="glass-hover">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <rect width="20" height="16" x="2" y="4" rx="2"/>
                                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
                             </svg>
                         </a>
-						<a href="https://www.tame.org/" target="_blank" rel="noopener" aria-label="TAME" class="glass-hover">
-                            <img src="socials/tame.png" height="24" style="color: var(--text-secondary)" />
-                        </a>
+						
                     </div>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <a href="/" class="hover-lift">Home</a>
-                    <a href="/meetings" class="hover-lift">Meetings</a>
-                    <a href="/shop" class="hover-lift">Shop</a>
+                    <a href="/about" class="hover-lift">About</a>
+                    <a href="/meetings" class="hover-lift">Tour Dates</a>
+                    <a href="/shop" class="hover-lift">Merch</a>
                     <a href="/contact" class="hover-lift">Contact</a>
                 </div>
                 <div class="footer-section">
-                    <h4>Contact</h4>
-                    <p>Reedy High School</p>
-                    <p>3003 Stonebrook Pkwy</p>
-                    <p>Frisco, TX 75034</p>
+                    <h4>Contact Us</h4>
+                    <p>stagefright202@gmail.com</p>
+                    <p>469-588-5791</p>
+
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 RHS Engineering Club. All rights reserved.</p>
+                <p>Stage Fright | All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -159,16 +158,6 @@
         font-size: var(--text-xl);
         font-weight: 500;
         line-height: 1;
-    }
-
-    .logo-text {
-        display: flex;
-        flex-direction: column;
-        font-size: var(--text-xs);
-        line-height: 1;
-        color: var(--text-primary);
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
     }
 
     .nav-links {

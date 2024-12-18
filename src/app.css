@@ -4,10 +4,10 @@
 :root {
     /* Core Colors */
     /*--primary: #00D1FF;*/
-	--primary: #21ff7d;
-    --primary-hover: #21ff7d1e;
-    --secondary: #FF3DFF;
-    --accent: #FFE600;
+	--primary: #be3d27;
+    --primary-hover: #0000001e;
+    --secondary: #af5140;
+    --accent: #ffe60000;
     
     /* Surface Colors */
     --surface-0: #080808;
@@ -104,13 +104,15 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('/images/hero-bg.jpg');
+    background-image: url('/images/concert.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-color: var(--surface-0);
-    opacity: 0.8;
+    opacity: 1;
     z-index: -2;
+
+    filter: brightness(5);
 }
 
 body::after {
@@ -123,6 +125,7 @@ body::after {
     background: linear-gradient(to bottom, rgba(8, 8, 8, 0.95), rgba(8, 8, 8, 0.85));
     z-index: -1;
 }
+
 
 /* Container */
 .container {

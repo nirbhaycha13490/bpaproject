@@ -36,7 +36,7 @@
         </div>
         <div in:fly={{ y: 20, duration: 600, delay: 100 }}>
             <h2>Our band members</h2>
-            <p>Each member of Stage Fright brings their unique energy and talent to the band, helping form a cohesive and united sound that cannot be replicated anywhere else:            </p>    
+            <p>Each member of Stage Fright brings their unique energy and talent to the band, helping form a cohesive and united sound that cannot be replicated anywhere else:</p>
         </div>
     </section>
     <section class="team">
@@ -46,7 +46,9 @@
                     <div class="card-inner">
                         <div class="card-front">
                             <h3>{officer.title}</h3>
-                            <img src={officer.img} alt="{officer.title}" />
+                            <div class="image-container">
+                                <img src={officer.img} alt="{officer.title}" />
+                            </div>
                             <p>{officer.description}</p>
                         </div>
                         <div class="card-back">
@@ -60,7 +62,6 @@
     </section>
 </div>
 
-
 <style>
 .hero {
     padding: var(--space-16) 0 0 0;
@@ -72,8 +73,8 @@
 }
 
 .team {
-    margin-bottom: var(--space-36); /* Add more space below the team section */
-    position: relative; /* Ensure stacking context */
+    margin-bottom: var(--space-36);
+    position: relative;
 }
 
 .team-grid {
@@ -86,9 +87,9 @@
 
 .officer-card {
     position: relative;
-    z-index: 1; /* Prevent cards from appearing over unrelated sections */
+    z-index: 1;
     perspective: 1000px;
-    min-height: 420px; /* Ensure enough space for flipped content */
+    min-height: 500px;
 }
 
 .card-inner {
@@ -106,18 +107,18 @@
 .card-front,
 .card-back {
     position: absolute;
-    top: 0; /* Align to the top of parent */
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
     border-radius: var(--border-radius-2xl);
-    padding: var(--space-8);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
     gap: var(--space-4);
+    padding: var(--space-8);
 }
 
 .card-back {
@@ -125,10 +126,29 @@
     transform: rotateY(180deg);
 }
 
-.officer-card img {
-    height: 320px;
-    width: 240px;
+.card-front h3,
+.card-back h3 {
+    margin-bottom: var(--space-2);
+}
+
+.card-front p,
+.card-back p {
+    margin-top: -0.5rem; /* Adjust position to move higher */
+}
+
+.image-container {
+    height: 360px;
+    width: 280px;
+    overflow: hidden;
     border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container img {
+    width: auto;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -145,7 +165,6 @@ h3 {
 p {
     color: var(--text-secondary);
     font-size: var(--text-lg);
-    margin-top: var(--space-4);
     line-height: 2.4;
 }
 
@@ -155,7 +174,7 @@ p {
     }
 
     .team {
-        margin-bottom: var(--space-20); /* Reduce space on smaller screens */
+        margin-bottom: var(--space-20);
     }
 }
 </style>

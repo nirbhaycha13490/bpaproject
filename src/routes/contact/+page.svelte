@@ -45,7 +45,7 @@
                     <h3>Customer Service Link</h3>
                     <p>Contact us for customer<br>service inquiries</p>
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSeTxmpwZYiYqzjs0vabLii3oflF6yFUi2OIw_Etk0050MZGOw/viewform?usp=header" target="_blank" class="contact-button">
-                        View Schedule
+                        View Form
                     </a>
                 </div>
             </div>

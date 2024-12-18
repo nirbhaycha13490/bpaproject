@@ -46,35 +46,7 @@
     <center><h2> Welcome</h2></center>
     <center><p>Hello, and welcome to Stage Fright, the hottest up-and-coming rock band! Stage Fright is an exciting new powerhouse of modern rock, combining electrifying guitar riffs, powerful vocals, and unique percussion to build songs unlike anything else. Every performance by Stage Fright isn’t just a concert; it’s a complete experience. With great music, charismatic band members, and a connection with the crowd, Stage Fright sets itself apart from its competitors to create a unique escapade that will leave a lasting impact. So, turn up the volume, feel the energy, and join the movement—because the music doesn’t just play with Stage Fright. It hits.
         </p></center>
-    
-	<!--
-    <section class="projects">
-        <h2>Latest Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card glass" in:fly={{ y: 20, duration: 600 }}>
-                <img src="/projects/placeholder.jpg" alt="blank one" />
-                <div class="content">
-                    <h3>blank one</h3>
-                    <p>blank one</p>
-                </div>
-            </div>
-            <div class="project-card glass" in:fly={{ y: 20, duration: 600, delay: 200 }}>
-                <img src="/projects/placeholder.jpg" alt="blank two" />
-                <div class="content">
-                    <h3>blank two</h3>
-                    <p>blank two</p>
-                </div>
-            </div>
-            <div class="project-card glass" in:fly={{ y: 20, duration: 600, delay: 400 }}>
-                <img src="/projects/placeholder.jpg" alt="Website Development" />
-                <div class="content">
-                    <h3>blank three</h3>
-                    <p>blank three</p>
-                </div>
-            </div>
-        </div>
-    </section>
-	-->
+
 
     <section class="join">
         <div class="join-content glass" in:fly={{ y: 20, duration: 600 }}>

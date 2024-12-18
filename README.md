@@ -1,4 +1,4 @@
-# Reedy Engineering Club Source Code
+# Stage Fright Website Source Code
 
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 

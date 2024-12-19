@@ -96,6 +96,17 @@
                     </div>
                 </div>
                 <div class="footer-section">
+                    <h4 style="font-size: 20px; font-weight: bold;">BPA Information</h4>
+                    <p style="font-size: 12px; line-height: 1.5;"><strong>Chapter Name:</strong> Reedy High School BPA (Chapter 02-1308)</p>
+                    <p style="font-size: 12px; line-height: 1.5;"><strong>Team Members:</strong> Saksham Shukla, Nirbhay Challa, Aarnav Thakur</p>
+                    <p style="font-size: 12px; line-height: 1.5;"><strong>Theme:</strong> Stage Fright Rock Band</p>
+                    <p style="font-size: 12px; line-height: 1.5;"><strong>School:</strong> Reedy High School</p>
+                    <p style="font-size: 12px; line-height: 1.5;"><strong>City, State:</strong> Frisco, TX</p>
+                    <p style="font-size: 12px; line-height: 1.5;"><strong>Year:</strong> 2024</p>
+                </div>
+                
+                
+                <div class="footer-section">
                     <h4>Quick Links</h4>
                     <a href="/" class="hover-lift">Home</a>
                     <a href="/about" class="hover-lift">About</a>
@@ -105,8 +116,10 @@
                 </div>
                 <div class="footer-section">
                     <h4>Contact Us</h4>
-                    <p>stagefright202@gmail.com</p>
-                    <p>469-588-5791</p>
+                    <p style="font-size: 0.9em;">Email: stagefright202@gmail.com</p>
+                    <p style="font-size: 0.9em;">Phone: 469-588-5791</p>
+                    <p style="font-size: 0.9em;">Address: 123 Maplewood Drive, Frisco, TX 62704</p>
+
 
                 </div>
             </div>
@@ -118,6 +131,7 @@
 </div>
 
 <style>
+    
     .layout {
         display: flex;
         flex-direction: column;
@@ -223,13 +237,20 @@
         margin-top: var(--space-16);
         border: 1px solid var(--glass-border);
     }
-
     .footer-content {
-        display: grid;
-        grid-template-columns: 2fr 1fr 1fr;
-        gap: var(--space-12);
-        padding: var(--space-12) 0 var(--space-6) 0;
-    }
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: var(--space-6);
+            flex-wrap: nowrap; 
+            padding: var(--space-12) 0 var(--space-6) 0;
+            overflow: hidden; 
+        }
+
+
+
+
+    
 
     .footer-section {
         display: flex;
@@ -327,5 +348,7 @@
         .footer-section h3 {
             justify-content: center;
         }
+        
+
     }
 </style>

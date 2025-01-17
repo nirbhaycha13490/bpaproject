@@ -1,29 +1,3 @@
-<script>
-    import { fly } from 'svelte/transition';
-    import { Rocket, GraduationCap, Swords } from 'lucide-svelte';
-
-
-    const features = [
-        {
-            icon: GraduationCap,
-            title: 'Lectures',
-            description: 'We teach to our members engineering concepts and disciplines from numerous fields.',
-            delay: 100
-        },
-        {
-            icon: Swords,
-            title: 'Competitions',
-            description: 'We host engineering competitions that can earn our members scholarships and medals.',
-            delay: 200
-        },
-        {
-            icon: Rocket,
-            title: 'Projects',
-            description: 'We host interactive projects to expose members to real-world engineering scenarios.',
-            delay: 300
-        }
-    ];
-</script>
 
 
 
